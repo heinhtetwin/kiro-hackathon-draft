@@ -21,30 +21,32 @@
 
 ---
 
+## Term of Glossary
+
+- Exploration
+- Confirm
+
 ## Authentication & User Management
-- [ ] Login/Register forms with validation
-- [ ] GitHub OAuth integration button
-- [ ] Password reset flow
-- [ ] User profile management page
-- [ ] Team invitation interface
-- [ ] Role selection dropdown
-- [ ] Session timeout handling
-- [ ] Two-factor authentication setup
+
+- [ ] Clerk Login
+- [ ] GitPeek repo import
+- [ ] Logout
 
 [Back to top](#kiro-hackathon-project---frontend-features)
 
 ## Repository Management Interface
-- [ ] GitHub URL input field with validation
+
 - [ ] Repository selection dropdown
-- [ ] Branch selection interface
-- [ ] Repository sync status indicator
-- [ ] Repository health score display
+- [ ] Branch selection interface (Exploration)
+- [ ] Repository sync status indicator (Exploration)
+- [ ] Repository health score display (Exploration)
 - [ ] File explorer tree view
-- [ ] Recent commits timeline
+- [ ] Recent commits timeline (Exploration)
 
 [Back to top](#kiro-hackathon-project---frontend-features)
 
 ## Code Analysis Dashboard
+
 - [ ] Code quality score widgets
 - [ ] Security vulnerability alerts panel
 - [ ] Performance metrics charts
@@ -59,6 +61,7 @@
 [Back to top](#kiro-hackathon-project---frontend-features)
 
 ## Dependency Analysis Interface
+
 - [ ] Interactive dependency tree/graph
 - [ ] Package list with version info
 - [ ] Vulnerability highlighting
@@ -73,6 +76,7 @@
 [Back to top](#kiro-hackathon-project---frontend-features)
 
 ## Kanban Board System
+
 - [ ] Drag-and-drop task interface
 - [ ] Column customization panel
 - [ ] Task creation modal
@@ -89,6 +93,7 @@
 [Back to top](#kiro-hackathon-project---frontend-features)
 
 ## Real-time Chat Interface
+
 - [ ] Channel sidebar navigation
 - [ ] Message input with formatting toolbar
 - [ ] File upload drag-and-drop
@@ -104,6 +109,7 @@
 [Back to top](#kiro-hackathon-project---frontend-features)
 
 ## AWS Integration Dashboard
+
 - [ ] AWS services grid/card view
 - [ ] Service dependency diagram
 - [ ] Resource utilization charts
@@ -119,6 +125,7 @@
 [Back to top](#kiro-hackathon-project---frontend-features)
 
 ## Customizable Dashboard
+
 - [ ] Drag-and-drop widget system
 - [ ] Widget resize handles
 - [ ] Dashboard layout templates
@@ -133,6 +140,7 @@
 [Back to top](#kiro-hackathon-project---frontend-features)
 
 ## Team Management Interface
+
 - [ ] Team member cards/list view
 - [ ] User invitation modal
 - [ ] Role assignment dropdown
@@ -147,6 +155,7 @@
 [Back to top](#kiro-hackathon-project---frontend-features)
 
 ## Analytics & Reporting
+
 - [ ] Interactive line/bar charts
 - [ ] Pie charts for distributions
 - [ ] Performance trend graphs
@@ -162,6 +171,7 @@
 [Back to top](#kiro-hackathon-project---frontend-features)
 
 ## Navigation & Layout
+
 - [ ] Responsive sidebar navigation
 - [ ] Breadcrumb navigation
 - [ ] Header with user profile dropdown
@@ -176,6 +186,7 @@
 [Back to top](#kiro-hackathon-project---frontend-features)
 
 ## Notification System
+
 - [ ] Toast notifications
 - [ ] In-app notification panel
 - [ ] Email notification preferences
@@ -188,6 +199,7 @@
 [Back to top](#kiro-hackathon-project---frontend-features)
 
 ## Settings & Configuration
+
 - [ ] User preferences panel
 - [ ] Theme customization
 - [ ] Keyboard shortcuts settings
@@ -202,6 +214,7 @@
 [Back to top](#kiro-hackathon-project---frontend-features)
 
 ## Search & Filtering
+
 - [ ] Global search bar
 - [ ] Advanced search filters
 - [ ] Search result highlighting
@@ -215,21 +228,122 @@
 
 [Back to top](#kiro-hackathon-project---frontend-features)
 
+---
 
-# Imagination Application 
+## Imagination Application
 
 [devforage](https://v0-modern-dev-platform-dashboard.vercel.app/)
 
+## Lists To Delete from Imagination App
 
-# Lists To Deleted from Imagination App
-
--  dependencies section on sidebar on platform main dashboard
--  aws services on sidebar on platform main dashboard
+- Dependencies section on sidebar on platform main dashboard
+- AWS services on sidebar on platform main dashboard
 - Team chat section on sidebar on platform main dashboard
 - Vault section on sidebar on platform main dashboard
 
+## Need to be Reduced for MVP
 
-# Need to be reduced for MVP 
+- 50% of Database insight section
 
-- 50  % of Database insight section
-- 
+---
+
+## UI Modification + User Stories
+
+### Step 1 - Authentication
+
+![img.png](img.png)
+
+#### Modification Note
+
+- Sign With Clerk
+- After clicking the sign in with clerk, user will be asked to authorize the app with GitHub
+---
+
+### Step 2 - User Initial Dashboard State
+
+![img_1.png](img_1.png)
+
+#### Modification Note
+
+- User will see the Project and metrics and button named create project
+- **On left nav bar**
+  - Overview
+  - Team Chat
+  - Inbox
+  - Profile Section
+---
+### Step 3 - User Project Creation
+
+![img_2.png](img_2.png)
+
+- User will see the Create Project Button
+- User will the select box where he can select the repo that he wanted to import
+- User will select and click import repository button
+
+![img_3.png](img_3.png)
+
+- User will see the importing step
+- If importing is failed, he will see the danger alert box
+- User will the imported project list with card box on the main dashboard
+---
+### Step 4 - User Manage His Created Project
+
+- User will click the open project button on the selected project card box
+- After that, he will see the project dashboard with Kanban board by default
+
+![img_4.png](img_4.png)
+
+- User will the sidebar which will include:
+  - Home, Inbox and Team by default (They are related to the whole account not the individual team)
+  - **Separator**
+  - Overview
+  - Dependencies
+  - AWS services
+  - Database
+  - Vault
+---
+### Step 5 - User Click Dependencies
+
+- Users will see the Dependencies Analysis with:
+  - Total Dependencies
+  - Vulnerabilities
+  - Security Score
+  - Outdated
+  - Risk Distribution
+
+- Dependencies:
+  - Dependencies list with tree view
+  - Dependencies with tree view
+
+![img_5.png](img_5.png)
+
+---
+
+### Step 6 - User Click Vault
+
+User can share and store his secrets as the env file with the team member
+
+- Users will see the Vault
+
+![img_6.png](img_6.png)
+
+---
+
+### Step 7 - User Can Chat with Their Team
+
+**Notes: Needed to be reduced scope**
+
+![img_7.png](img_7.png)
+
+---
+### Step 8 - User Will See the Inbox
+  
+**Notes: Needed to be discussed (Exploration)**
+
+---
+
+### Step 9 - User Will See the AWS and Database
+
+**Notes: Needed to be discussed (Exploration)**
+
+---
